@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Paytone+One&display=swap');
 
-/* --- CONFIGURACIÓN GENERAL JURÁSICA --- */
+/* --- CONFIGURACIÓN GENERAL BAHÍA DE LA AVENTURA --- */
 html {
     font-size: 8px;
-    font-family: 'Fredoka', cursive, sans-serif;
+    font-family: 'Fredoka', system-ui, sans-serif;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    padding: 30px 10px;
+    padding: 25px 10px;
     box-sizing: border-box;
     overflow-x: hidden;
     text-align: center;
 
-    /* Fondo degradado Selva Prehistórica */
-    background: linear-gradient(180deg, #0b3d11 0%, #1c5d18 40%, #3e2723 100%);
+    /* Fondo degradado Azul Mando a Azul Bahía */
+    background: linear-gradient(180deg, #0052cc 0%, #0088ff 50%, #003399 100%);
     background-size: 200% 200%;
-    animation: ambienteSelva 12s ease infinite;
+    animation: ambienteMando 10s ease infinite;
 
     color: #ffffff;
     display: flex;
@@ -28,158 +28,174 @@ body {
     position: relative;
 }
 
-/* Hojas y vegetación de fondo */
+/* Patrón de huellitas flotantes de fondo */
 body::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('https://svgsilh.com/svg/1294827.svg'); /* Patrón de hojas tropicales */
-    background-size: 150px;
+    background-image: url('https://svgsilh.com/svg/309686.svg'); /* Huella canina */
+    background-size: 110px;
     opacity: 0.08;
     pointer-events: none;
-    animation: vientoSelva 20s linear infinite;
+    animation: huellasFlotando 20s linear infinite;
 }
 
-/* --- DINO BEBÉ ASOMÁNDOSE (T-Rex Flotante) --- */
+/* --- CHASE Y MARSHALL ASOMÁNDOSE (Costado) --- */
 body::after {
     content: "";
     position: fixed;
-    bottom: -5px;
+    bottom: 0px;
     right: 5px;
-    width: 140px;
-    height: 140px;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/2591/2591322.png'); /* Bebé T-Rex tierno */
+    width: 135px;
+    height: 135px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3069/3069172.png'); /* Cachorro en acción */
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 10;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
-    animation: dinoAsomando 4s ease-in-out infinite;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
+    animation: cachorroAlRescate 3.5s ease-in-out infinite alternate;
 }
 
-/* --- TÍTULOS ESTILO JURASSIC --- */
+/* --- TÍTULOS ESTILO PAW PATROL --- */
 h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 3.5rem;
-    color: #ffcc00;
-    text-shadow: 4px 4px 0px #5c3000, 0 0 20px rgba(255, 204, 0, 0.6);
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3.6rem;
+    color: #ffcc00; /* Amarillo Paw Patrol */
+    text-shadow: 4px 4px 0px #d00000, 0 0 15px rgba(255, 204, 0, 0.8);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 h2 {
     font-size: 1.8rem;
-    background: rgba(46, 125, 50, 0.85);
-    color: #e8f5e9;
-    padding: 10px 22px;
-    border-radius: 30px;
-    border: 3px dashed #aed581;
+    background: #e60000; /* Rojo Marshall */
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 40px;
+    border: 3px solid #ffcc00;
     display: inline-block;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+    font-weight: 700;
 }
 
-/* --- RECUADROS DEL CONTADOR COMO CARITAS / CABEZAS DE DINOSAURIO --- */
+/* --- RECUADROS DEL CONTADOR: PLACAS DE LOS CACHORROS --- */
 .contador-container {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.4rem;
     margin: 35px 0 20px 0;
 }
 
 .c-number {
     position: relative;
-    background: linear-gradient(145deg, #4da234, #2d6a1b);
     color: #ffffff;
-    padding: 16px 12px 10px 12px;
-    border-radius: 20px 20px 15px 15px;
-    font-size: 2.4rem;
-    font-family: 'Luckiest Guy', cursive;
-    min-width: 50px;
-    border: 3px solid #72d650;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 4px 0 rgba(255, 255, 255, 0.3);
-    text-shadow: 2px 2px 0px #1b430e;
-    animation: dinoCabezaMover 3s ease-in-out infinite alternate;
+    padding: 18px 10px 10px 10px;
+    border-radius: 18px 18px 28px 28px; /* Forma de placa de rescate */
+    font-size: 2.5rem;
+    font-family: 'Paytone One', cursive;
+    min-width: 52px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 4px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    animation: placaMover 3s ease-in-out infinite alternate;
 }
 
-/* CRESTA / PICOS DE DINOSAURIO (Partes superiores de la cabeza) */
+/* OREJITAS DE CACHORRO SOBRE CADA CAJA */
 .c-number::before {
-    content: "";
+    content: "🐶";
     position: absolute;
-    top: -14px;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 12px;
-    /* Picos de estegosaurio usando triángulos CSS */
-    background: radial-gradient(circle at 30% 100%, #ff5722 40%, transparent 45%),
-                radial-gradient(circle at 50% 100%, #ff9800 40%, transparent 45%),
-                radial-gradient(circle at 70% 100%, #ff5722 40%, transparent 45%);
-    background-size: 20px 14px;
-    background-repeat: repeat-x;
+    font-size: 1.4rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
-/* OJITOS DE DINOSAURIO EN CADA CAJA */
+/* INSIGNIA BRILLANTE INFERIOR */
 .c-number::after {
-    content: "👀";
+    content: "⭐";
     position: absolute;
-    top: -12px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2rem;
-    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
+    font-size: 0.9rem;
+    background: #ffcc00;
+    border-radius: 50%;
+    padding: 1px 3px;
+    border: 1px solid #ffffff;
 }
 
-/* Variaciones de especies de dinos por cada número */
-.contador-container > div:nth-child(1) .c-number { background: linear-gradient(145deg, #4da234, #2d6a1b); border-color: #a4f58a; }
-.contador-container > div:nth-child(2) .c-number { background: linear-gradient(145deg, #ff8c00, #d85000); border-color: #ffc278; }
-.contador-container > div:nth-child(3) .c-number { background: linear-gradient(145deg, #00a896, #028090); border-color: #64dfdf; }
-.contador-container > div:nth-child(4) .c-number { background: linear-gradient(145deg, #e63946, #9b1d20); border-color: #ff99ac; }
+/* Personalización por cada Cachorro de la Patrulla */
+/* 1. CHASE (Azul Policía) */
+.contador-container > div:nth-child(1) .c-number {
+    background: linear-gradient(145deg, #0052cc, #002b80);
+    border-color: #ffcc00;
+}
+/* 2. MARSHALL (Rojo Bombero) */
+.contador-container > div:nth-child(2) .c-number {
+    background: linear-gradient(145deg, #ff0000, #990000);
+    border-color: #ffffff;
+}
+/* 3. RUBBLE (Amarillo Constructor) */
+.contador-container > div:nth-child(3) .c-number {
+    background: linear-gradient(145deg, #ffbb00, #cc9600);
+    border-color: #0052cc;
+    color: #1a1a1a;
+    text-shadow: none;
+}
+/* 4. SKYE (Rosa Aviadora) */
+.contador-container > div:nth-child(4) .c-number {
+    background: linear-gradient(145deg, #ff3399, #cc0066);
+    border-color: #ffffff;
+}
 
 .c-text {
-    margin-top: 10px;
-    font-size: 1rem;
+    margin-top: 12px;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #ffeb3b;
+    color: #ffcc00;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     letter-spacing: 1px;
 }
 
-/* --- BOTÓN DE CONFIRMACIÓN (DINO-HUEVO / BOTÓN JURÁSICO) --- */
+/* --- BOTÓN DE CONFIRMACIÓN: PUP-PAD DE EMERGENCIA --- */
 .btn-confirmar {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #ffd500 0%, #ff8800 100%);
-    color: #3e1f00;
+    background: linear-gradient(180deg, #ff0000 0%, #cc0000 100%);
+    color: #ffffff;
     text-decoration: none;
-    padding: 18px 36px;
-    border-radius: 60px 60px 50px 50px;
+    padding: 18px 38px;
+    border-radius: 50px;
     cursor: pointer;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Paytone One', sans-serif;
     font-size: 1.8rem;
-    border: 4px solid #ffffff;
-    box-shadow: 0 12px 25px rgba(255, 136, 0, 0.6), 0 8px 0 #b35900, inset 0 5px 0 rgba(255,255,255,0.6);
+    border: 5px solid #ffcc00;
+    box-shadow: 0 12px 25px rgba(255, 0, 0, 0.6), 0 8px 0 #800000, inset 0 4px 0 rgba(255,255,255,0.5);
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin: 25px 0;
     position: relative;
-    animation: huevoRebote 2.5s infinite;
+    animation: alarmaSirena 2s infinite;
 }
 
-/* Garras sobre el botón */
+/* Icono de sirena sobre el botón */
 .btn-confirmar::before {
-    content: "🐾";
+    content: "🚨";
     position: absolute;
-    top: -15px;
-    font-size: 1.6rem;
+    top: -16px;
+    font-size: 1.5rem;
 }
 
 .btn-confirmar:hover {
-    transform: translateY(-6px) scale(1.08) rotate(-1deg);
-    background: linear-gradient(180deg, #72d650 0%, #2e7d32 100%);
-    color: #ffffff;
-    box-shadow: 0 18px 35px rgba(114, 214, 80, 0.8), 0 8px 0 #1b5e20;
-    border-color: #ffeb3b;
+    transform: translateY(-6px) scale(1.08);
+    background: linear-gradient(180deg, #ffcc00 0%, #ff9900 100%);
+    color: #002b80;
+    border-color: #ffffff;
+    box-shadow: 0 18px 35px rgba(255, 204, 0, 0.8), 0 8px 0 #cc7a00;
 }
 
 .btn-confirmar span {
@@ -191,94 +207,88 @@ h2 {
     font-weight: 700;
 }
 
-/* --- FOOTER ROAR --- */
+/* --- FOOTER BAHÍA --- */
 footer {
     margin-top: 30px;
     font-size: 1.2rem;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0, 43, 128, 0.6);
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: 2px solid #ffcc00;
 }
 
 footer a {
-    color: #ffca28;
+    color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 2px dashed #ffca28;
+    border-bottom: 2px dashed #ffcc00;
 }
 
 footer a:hover {
-    color: #72d650;
-    border-bottom-color: #72d650;
+    color: #ffffff;
+    border-bottom-color: #ffffff;
 }
 
-/* --- ANIMACIONES DINO --- */
-@keyframes ambienteSelva {
+/* --- ANIMACIONES --- */
+@keyframes ambienteMando {
     0% { background-position: 50% 0%; }
     50% { background-position: 50% 100%; }
     100% { background-position: 50% 0%; }
 }
 
-@keyframes vientoSelva {
+@keyframes huellasFlotando {
     from { background-position: 0 0; }
-    to { background-position: 300px 600px; }
+    to { background-position: 0 -500px; }
 }
 
-@keyframes dinoAsomando {
-    0%, 100% { transform: translateY(10px) rotate(0deg); }
-    50% { transform: translateY(-12px) rotate(-6deg); }
+@keyframes cachorroAlRescate {
+    0% { transform: translateY(10px) rotate(0deg); }
+    100% { transform: translateY(-12px) rotate(-5deg); }
 }
 
-@keyframes dinoCabezaMover {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(-6px) rotate(2deg); }
+@keyframes placaMover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-6px); }
 }
 
-@keyframes huevoRebote {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-8px) scale(1.03); }
+@keyframes alarmaSirena {
+    0%, 100% { box-shadow: 0 12px 25px rgba(255, 0, 0, 0.6), 0 8px 0 #800000; }
+    50% { box-shadow: 0 12px 30px rgba(255, 204, 0, 0.9), 0 8px 0 #800000; }
 }
 
-/* --- ADAPTACIÓN ADULTOS / PANTALLAS GRANDES --- */
+/* --- ADAPTACIÓN PANTALLAS GRANDES --- */
 @media (min-width: 900px) {
     html {
         font-size: 18px;
     }
 
     body::after {
-        width: 230px;
-        height: 230px;
-        right: 30px;
+        width: 210px;
+        height: 210px;
+        right: 35px;
     }
 
     .contador-container {
-        gap: 2.5rem;
+        gap: 2.2rem;
     }
 
     .c-number {
-        padding: 24px 20px 15px 20px;
+        padding: 22px 18px 12px 18px;
         font-size: 3.5rem;
-        min-width: 80px;
-        border-radius: 28px 28px 20px 20px;
+        min-width: 82px;
+        border-radius: 24px 24px 35px 35px;
         border-width: 5px;
     }
 
     .c-number::before {
-        top: -18px;
-        height: 18px;
-        background-size: 28px 18px;
-    }
-
-    .c-number::after {
-        top: -16px;
-        font-size: 1.6rem;
+        top: -20px;
+        font-size: 1.8rem;
     }
 
     .btn-confirmar {
-        padding: 24px 50px;
+        padding: 24px 52px;
         font-size: 2.2rem;
-        border-width: 5px;
+        border-width: 6px;
     }
 
     .btn-confirmar span {
